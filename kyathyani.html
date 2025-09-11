@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            background-color: #f8d6d1;
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        form {
+            width: 60%;
+            margin: auto;
+            background: #fffaf9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #999;
+        }
+        
+        label {
+            display: inline-block;
+            width: 150px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 60%;
+            padding: 6px;
+            margin-bottom: 10px;
+            border: 1px solid #999;
+            border-radius: 5px;
+        }
+        
+        .inline-input input {
+            width: 28%;
+            margin-right: 5px;
+        }
+        
+        .gender input,
+        .department input {
+            width: auto;
+            margin-left: 10px;
+        }
+        
+        .btn {
+            text-align: center;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background: #ff6f61;
+            color: white;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #e65c50;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Registration Form</h1>
+    <form id="regForm">
+        <label>Roll no. :</label>
+        <input type="text" name="roll" required><br>
+
+        <label>Student name :</label>
+        <div class="inline-input">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+        </div><br>
+
+        <label>Father's name :</label>
+        <input type="text" required><br>
+
+        <label>Date of birth :</label>
+        <div class="inline-input">
+            <input type="text" placeholder="Day">
+            <input type="text" placeholder="Month">
+            <input type="text" placeholder="Year">
+        </div> (DD-MM-YYYY)<br>
+
+        <label>Mobile no. :</label>
+        <div class="inline-input">
+            <input type="text" value="+91" readonly style="width:15%;">
+            <input type="text" placeholder="Phone Number">
+        </div><br>
+
+        <label>Email id :</label>
+        <input type="email" required><br>
+
+        <label>Password :</label>
+        <input type="password" required><br>
+
+        <label>Gender :</label>
+        <span class="gender">
+      <input type="radio" name="gender" value="male"> Male
+      <input type="radio" name="gender" value="female"> Female
+    </span><br>
+
+        <label>Department :</label>
+        <span class="department">
+      <input type="checkbox" value="CSE"> CSE
+      <input type="checkbox" value="IT"> IT
+      <input type="checkbox" value="ECE"> ECE
+      <input type="checkbox" value="Civil"> Civil
+      <input type="checkbox" value="Mech"> Mech
+    </span><br>
+
+        <label>Course :</label>
+        <select>
+      <option>---------------- Select Current Course's ----------------</option>
+      <option>B.Tech</option>
+      <option>M.Tech</option>
+      <option>B.Sc</option>
+      <option>MBA</option>
+    </select><br>
+
+        <label>Student photo :</label>
+        <input type="file"><br>
+
+        <label>City :</label>
+        <input type="text"><br>
+
+        <label>Address :</label>
+        <textarea rows="3"></textarea><br>
+
+        <div class="btn">
+            <button type="button" onclick="submitForm()">Register</button>
+        </div>
+    </form>
+
+    <!-- Link to JavaScript file -->
+    <script src="registration.js"></script>
+</body>
+
+</html>
